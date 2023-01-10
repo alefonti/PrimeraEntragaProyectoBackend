@@ -49,7 +49,7 @@ productosRouter.post("/", (req, res) => {
         fs.promises.readFile(archivoProductos, "utf-8")
         .then ((dataEnJSON) => {
             const dataObject = JSON.parse(dataEnJSON);
-            const producto = {"id": dataObject.length + 1, "timestamp": fechaYHora(), ...req.body}  //Asignamos un id al nuevo producto igual a su posicion en el array + 1
+            const producto = {"id": dataObject.length + 1, "timestamp": fechaYHora(), ...req.body}
             dataObject.push(producto);
             dataEnJSON = JSON.stringify(dataObject);
             fs.promises.writeFile(archivoProductos, dataEnJSON);
@@ -68,7 +68,7 @@ productosRouter.put("/:id", (req, res) => {
             const dataObject = JSON.parse(dataEnJSON);
             const index = dataObject.findIndex((prod) => prod.id == id)
             if (index !== -1) {
-                const producto = {"id": index + 1, ...req.body}     //Agregamos la id al producto modificado
+                const producto = {"id": index + 1, ...req.body}
                 dataObject.splice(index, 1, producto)
                 dataEnJSON = JSON.stringify(dataObject);
                 fs.promises.writeFile(archivoProductos, dataEnJSON);
@@ -187,7 +187,7 @@ carritosRouter.get("/:id/productos", (req, res) => {
             const productosEnCarrito = JSON.stringify(carritoElegido.productos);
             res.send(productosEnCarrito);
         } else {
-            res.send("Carrito no Encontrado, el Id no existe");
+            res.send("Carrito no Encontrado");
         }   
     })
 })

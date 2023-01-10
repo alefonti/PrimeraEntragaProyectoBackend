@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "timestamp": "7/1/2023 17:22:23",
+        "nombre": "Sweater",
+        "descripcion": "Sweater Gris",
+        "codigo": "sw1",
+        "foto": "image1",
+        "precio": 12500,
+        "stock": 14
+    },
+    {
+        "id": 2,
+        "timestamp": "7/1/2023 17:24:01",
+        "nombre": "Remera",
+        "descripcion": "Remera a Rayas",
+        "codigo": "re1",
+        "foto": "image2",
+        "precio": 9000,
+        "stock": 16
+    },
+    {
+        "id": 3,
+        "timestamp": "7/1/2023 17:25:37",
+        "nombre": "Piloto",
+        "descripcion": "Piloto Negro",
+        "codigo": "pi1",
+        "foto": "image3",
+        "precio": 15000,
+        "stock": 7
+    }
+]
